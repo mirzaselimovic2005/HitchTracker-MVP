@@ -1,0 +1,8 @@
+navigator.geolocation.getCurrentPosition = function(success, error, options) {
+    success({
+        coords: {
+            latitude: 51.98,
+            longitude: 5.91111, 
+        },
+    });
+};
