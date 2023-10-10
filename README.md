@@ -1,8 +1,3 @@
-# React + Vite
+HitchTracker - Minimal viable product
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![18eae81cb93e663c1a2f9dc62c1960fd](https://github.com/mirzaselimovic2005/HitchTracker-MVP/assets/91285462/a9669cb7-38a9-436d-9ba2-71b5565bc648)
