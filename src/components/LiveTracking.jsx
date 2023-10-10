@@ -85,38 +85,50 @@ class LiveTracking extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.state.trackingActive ? this.stopTracking : this.startTracking}>
-                    {this.state.trackingActive ? 'Stop rit' : 'Start rit'}
-                </button>
-                {this.state.currentLocation && (
-                    <div>
-                        <p>Afstand gereisd: {this.state.distanceTraveled.toFixed(2)} km</p>
-                        <p>Prijs: {this.state.price.toFixed(2)} EUR</p>
-                        <p>-----------------------------------------------------------</p>
-                        <p>Straatnaam: {this.state.addressInfo.road}</p>
-                        <p>Stad: {this.state.addressInfo.city}</p>
-                        <p>Provincie: {this.state.addressInfo.state}</p>
-                        <p>Land: {this.state.addressInfo.country}</p>
-                        <p>-----------------------------------------------------------</p>
+
+            <div className="container-fluid" style={{ height: '100vh', padding: "0" }}>
+                <div className="backgroundimage">
+                    <div className="d-flex justify-content-between">
+                        <button
+                            onClick={this.state.trackingActive ? this.stopTracking : this.startTracking}
+                            className="btn btn-primary"
+                        >
+                            {this.state.trackingActive ? 'Stop rit' : 'Start rit'}
+                        </button>
                     </div>
-                )}
-                {this.state.startLocation && (
-                    <div>
-                        <p>Start Locatie:</p>
-                        <p>Latitude: {this.state.startLocation.latitude}</p>
-                        <p>Longitude: {this.state.startLocation.longitude}</p>
-                        <p>-----------------------------------------------------------</p>
-                    </div>
-                )}
-                {this.state.stopLocation && (
-                    <div>
-                        <p>Stop Locatie:</p>
-                        <p>Latitude: {this.state.stopLocation.latitude}</p>
-                        <p>Longitude: {this.state.stopLocation.longitude}</p>
-                        <p>-----------------------------------------------------------</p>
-                    </div>
-                )}
+
+                    {this.state.currentLocation && (
+                        <div className="">
+                            <p><strong>Afstand gereisd:</strong> {this.state.distanceTraveled.toFixed(2)} km</p>
+                            <p><strong>Prijs:</strong> {this.state.price.toFixed(2)} EUR</p>
+                        </div>
+                    )}
+
+                    {this.state.addressInfo && (
+                        <div className="">
+                            <p><strong>Straatnaam:</strong> {this.state.addressInfo.road}</p>
+                            <p><strong>Stad:</strong> {this.state.addressInfo.city}</p>
+                            <p><strong>Provincie:</strong> {this.state.addressInfo.state}</p>
+                            <p><strong>Land:</strong> {this.state.addressInfo.country}</p>
+                        </div>
+                    )}
+
+                    {this.state.startLocation && (
+                        <div className="">
+                            <p><strong>Start Locatie:</strong></p>
+                            <p><strong>Latitude:</strong> {this.state.startLocation.latitude}</p>
+                            <p><strong>Longitude:</strong> {this.state.startLocation.longitude}</p>
+                        </div>
+                    )}
+
+                    {this.state.stopLocation && (
+                        <div className="">
+                            <p><strong>Stop Locatie:</strong></p>
+                            <p><strong>Latitude:</strong> {this.state.stopLocation.latitude}</p>
+                            <p><strong>Longitude:</strong> {this.state.stopLocation.longitude}</p>
+                        </div>
+                    )}
+                </div>
             </div>
         );
     }
